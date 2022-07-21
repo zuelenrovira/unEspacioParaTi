@@ -49,6 +49,8 @@
     background-color: wheat;    
     margin: 1rem;
     padding: 0.5rem;
+    border-radius: 40%;
+    color:rgb(78, 19, 78);
    
    
 }
@@ -185,10 +187,30 @@
 
 /*Estilos de página de Sobre Nosotros*/
 
-.nosotrosTarjeta{
-    margin-top: 500px;
-    background-color:rgb(109, 202, 214);
-    height: 150px;
+.tituloNosotros{
+    margin-top: 2rem;
+    text-align: center;
+    color:rgb(78, 19, 78);
+    text-shadow: 2px 1px black;
+}
+
+.imagenNosotros{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.imagenNosotros img{
+    width: 80%;
+}
+
+.textoNosotros{
+    text-align: justify;
+    margin-top: 2rem;
+    
+}
+
+.footerNosotros{
+    margin-top: 10rem;
 }
 
 
