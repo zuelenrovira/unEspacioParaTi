@@ -1,0 +1,18 @@
+@mixin estilos-menu{
+    list-style: none;
+    font-size:  1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: wheat;    
+    margin: 1rem;
+    border-radius: 40%;
+}
+
+@mixin transform($transform){
+    -webkit-transform: $transform;
+    -o-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+
+}

@@ -1,0 +1,119 @@
+/*Estilos de Proyectos*/
+.gridProyectos{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.8fr 2fr 2fr;
+    grid-template-areas:"titulo titulo titulo"
+                        "proyectoUno proyectoDos proyectoTres"
+                        "tuProyecto tuProyecto tuProyecto";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    column-gap: 3rem;
+
+    .tituloParaTodo{
+        @extend %titulo;
+    }
+    
+    .proyectoUno{
+        grid-area: proyectoUno;
+        text-align: center;
+
+        p{
+            text-align: center;
+        }
+
+        img{
+            width: 80%;
+            border-radius: 15%;
+            border: 3.5px $color-letra solid;
+        }
+       
+    }
+
+    .proyectoDos{
+        grid-area: proyectoDos;
+        text-align: center;
+    
+        p{
+            text-align: center;
+        }
+    
+        img{
+            width: 80%;
+            border-radius: 15%;
+            border: 3.5px $color-letra solid;
+        }
+       
+    }
+
+
+    .proyectoTres{
+        grid-area: proyectoTres;
+        text-align: center;
+
+        p{
+            text-align: center;
+        }
+        
+        img{
+            width: 80%;
+            border-radius: 15%;
+            border: 3.5px $color-letra solid;
+        }
+    }
+
+    .tuProyecto{
+        grid-area: tuProyecto;
+        text-align: center;
+
+        p{
+            text-align: center;
+        }
+    }
+
+}
+
+/*vista mobile Proyectos*/
+
+@media only screen and (max-width: 480px){
+    
+    .gridProyectos{
+        grid-template-columns: auto;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:"titulo"
+                            "proyectoUno"
+                            "proyectoDos"
+                            "proyectoTres"
+                            "tuProyecto";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin: 1rem;
+        row-gap: 5rem;
+        
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
+
+    }
+
+    .menu{
+
+        ul{
+            li{
+                background-color: transparent;
+            }
+
+        } 
+    }
+
+    .tuProyecto{
+        fieldset{
+            textarea{
+                width: 80%;
+            }
+        }
+    }    
+}

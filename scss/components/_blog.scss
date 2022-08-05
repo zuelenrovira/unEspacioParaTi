@@ -1,0 +1,127 @@
+/*Estilos de Blog*/
+.gridBlog{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas:"titulo titulo titulo"
+                        "articulo1 articulo2 articulo3"
+                        "articulo4 articulo5 articulo6";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    .tituloParaTodo{
+        @extend %titulo;
+    }
+
+    .articulo1{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo1;
+
+        img{
+            width: 80%;
+            
+        }
+       
+    }
+
+    .articulo2{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo2;
+
+        img{
+            width: 80%;
+            
+        }
+    
+    }
+
+    .articulo3{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo3;
+
+        img{
+            width: 80%;
+            
+        }
+    
+    }
+
+    .articulo4{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo4;
+
+        img{
+            width: 80%;
+            
+        }
+    
+    }
+
+    .articulo5{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo5;
+
+        img{
+            width: 80%;
+            
+        }
+        
+    
+    }
+
+    .articulo6{
+        text-align: center;
+        font-weight: bold;
+        grid-area: articulo6;
+
+        img{
+            width: 80%;
+            
+        }
+    
+    }
+    
+
+}
+
+
+
+/*vista mobile blog*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .gridBlog{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr repeat(6,1fr);
+        grid-template-areas:"titulo"
+                            "articulo1"
+                            "articulo2"
+                            "articulo3"
+                            "articulo4"
+                            "articulo5"
+                            "articulo6";
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1.5rem;
+        
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
+    }
+
+    .menu{
+         ul{ 
+            li{
+                background-color: transparent;
+            }
+        }
+    }
+}

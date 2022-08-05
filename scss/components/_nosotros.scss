@@ -1,0 +1,82 @@
+/*Estilos de Nosotros*/
+.container-fluid{
+    .row{
+        .tituloParaTodo{
+            @extend %titulo;
+        }
+
+        .imagenNosotros{
+            margin-top: 2rem;
+            text-align: center;
+            img{
+                width: 80%;
+            }
+        }
+
+        .textoNosotros{
+            margin-top: 2rem;    
+            p{
+                font-size: large;
+                font-weight: bold;
+                text-align: justify;
+            }
+        }
+    }
+    
+    .footerNosotros{
+        margin-top: 5rem;
+    }
+}
+
+
+/*Vista mobile Nosotros*/
+
+@media only screen and (max-width: 480px){
+    .headerParaTodo{
+        .menu{
+            ul{
+                li{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    
+
+    .container-fluid{
+        .row{
+            .tituloParaTodo{
+                text-shadow: 1px 1px black;
+            }
+
+            .textoNosotros{
+        
+                p{
+                    font-size: medium;
+                }
+            }
+        } 
+    }       
+}
+
+/*Vista tablet Nosotros*/
+@media only screen and (max-width: 991px){
+    .headerParaTodo{
+        .menu{
+            ul{
+                li{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    
+    .container-fluid{
+        .row{
+            .tituloParaTodo{
+                text-shadow: 1px 1px black;
+            }
+        }
+    }    
+}
+

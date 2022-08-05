@@ -1,0 +1,97 @@
+/*Estilos de Contacto*/
+
+.gridContacto{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.4fr 2fr;
+    grid-template-areas:"titulo titulo"
+                        "contacto img6";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    .tituloParaTodo{
+        @extend %titulo;
+    }
+
+    .imagenContacto{
+        grid-area: img6;
+        justify-self: center;
+        transform: scale(0.8);
+    
+    }
+    
+    .imagenMobile{
+        display: none;
+    }
+
+    .formaContacto{
+        grid-area: contacto;
+        font-size: 1rem;
+
+        fieldset{
+            border: none;
+
+            legend{
+                font-weight: bold;
+            }
+
+            .botonesContacto{
+                input{
+                    border-radius: 0.5rem;
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }    
+            }
+        }
+    }
+    
+   
+}
+
+
+
+/*vista mobile contacto*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .gridContacto{
+        grid-template-columns: auto;
+        grid-template-rows: 0.5fr 1fr 2fr;
+        grid-template-areas:"titulo"
+                            "imgMobile"
+                            "contacto";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        row-gap: 1rem;
+
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
+        
+        .imagenMobile{
+            display: block;
+            grid-area: imgMobile;
+            text-align: center;
+
+            img{
+    
+                width: 80%;
+            }
+            
+        }
+
+        .imagenContacto{
+            display: none;
+        }
+    }
+
+    .menu{
+        ul{ 
+           li{
+               background-color: transparent;
+           }
+       }
+   }
+}
