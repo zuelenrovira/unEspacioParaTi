@@ -14,9 +14,11 @@
         }
 
         .textoNosotros{
-            margin-top: 2rem;    
+            margin-top: 2rem;
+            padding-right: 8rem;
+            align-self: center; 
             p{
-                font-size: large;
+                font-size: x-large;
                 font-weight: bold;
                 text-align: justify;
             }
@@ -24,21 +26,61 @@
     }
     
     .footerNosotros{
-        margin-top: 5rem;
+        margin-top: 13rem;
     }
 }
 
+
+/*Vista tablet Nosotros*/
+@media only screen and (max-width: 991px){
+    .headerParaTodo{
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{
+                        li{
+                            background-color: transparent;
+                        }
+                    }  
+                }
+            }    
+        }
+    }
+    
+    .container-fluid{
+        .row{
+            .tituloParaTodo{
+                text-shadow: 1px 1px black;
+            }
+
+            .textoNosotros{
+                padding: 5rem;
+                p{
+                    font-size: large;
+                }
+            }
+        }
+    }    
+}
 
 /*Vista mobile Nosotros*/
 
 @media only screen and (max-width: 480px){
     .headerParaTodo{
-        .menu{
-            ul{
-                li{
-                    background-color: transparent;
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{
+                        li{
+                            background-color: transparent;
+                        }
+                    }  
                 }
-            }
+            }    
         }
     }
     
@@ -50,33 +92,12 @@
             }
 
             .textoNosotros{
-        
+                padding: 3rem;
                 p{
                     font-size: medium;
                 }
             }
         } 
     }       
-}
-
-/*Vista tablet Nosotros*/
-@media only screen and (max-width: 991px){
-    .headerParaTodo{
-        .menu{
-            ul{
-                li{
-                    background-color: transparent;
-                }
-            }
-        }
-    }
-    
-    .container-fluid{
-        .row{
-            .tituloParaTodo{
-                text-shadow: 1px 1px black;
-            }
-        }
-    }    
 }
 

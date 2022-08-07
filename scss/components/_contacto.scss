@@ -50,11 +50,54 @@
    
 }
 
+/*vista tablet contacto*/
 
+@media only screen and (max-width: 991px){
+
+    .headerParaTodo{
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{ 
+                       li{
+                           background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gridContacto{
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
+
+    }
+}
 
 /*vista mobile contacto*/
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
+@media only screen and (max-width: 480px){
+    
+    .headerParaTodo{
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{ 
+                       li{
+                           background-color: transparent;
+                       }
+                   }
+               }
+            }
+        }
+    }
+
     .gridContacto{
         grid-template-columns: auto;
         grid-template-rows: 0.5fr 1fr 2fr;
@@ -86,12 +129,4 @@
             display: none;
         }
     }
-
-    .menu{
-        ul{ 
-           li{
-               background-color: transparent;
-           }
-       }
-   }
 }

@@ -65,20 +65,49 @@
     }
 
     .tuProyecto{
+        padding: 1rem;
+        background-color: rgb(156, 205, 220);
+        border-radius: 1%;
         grid-area: tuProyecto;
         text-align: center;
+        margin-left: 25rem;
+        margin-right: 25rem;     
 
         p{
             text-align: center;
+            font-size: large;
+        }
+
+        fieldset{
+            label{
+                font-size: large;
+                font-weight: bold;
+            }
         }
     }
 
 }
 
-/*vista mobile Proyectos*/
+ /*vista tablet Proyectos*/
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 991px){
     
+    .headerParaTodo{
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{
+                        li{
+                            background-color: transparent;
+                        }
+                    }  
+                }
+            }    
+        }
+    }
+
     .gridProyectos{
         grid-template-columns: auto;
         grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
@@ -92,28 +121,71 @@
         align-items: center;
         margin: 1rem;
         row-gap: 5rem;
-        
+            
         .tituloParaTodo{
             text-shadow: 1px 1px black;
         }
 
-    }
-
-    .menu{
-
-        ul{
-            li{
-                background-color: transparent;
+        .tuProyecto{
+            margin-left: 0rem;
+            margin-right: 0rem;
+            fieldset{
+                textarea{
+                    width: 100%;
+                }
             }
-
-        } 
+        }    
     }
-
-    .tuProyecto{
-        fieldset{
-            textarea{
-                width: 80%;
-            }
-        }
-    }    
+    
 }
+
+
+/*vista mobile Proyectos*/
+
+@media only screen and (max-width: 480px){
+    
+    .headerParaTodo{
+        justify-content: unset;
+        .navbar{
+            width: 100%;
+            .container-fluid{
+                .menu{
+                    ul{
+                        li{
+                            background-color: transparent;
+                        }
+                    }  
+                }
+            }    
+        }
+    }
+
+    .gridProyectos{
+        grid-template-columns: auto;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:"titulo"
+                            "proyectoUno"
+                            "proyectoDos"
+                            "proyectoTres"
+                            "tuProyecto";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin: 1rem;
+        row-gap: 3rem;
+            
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
+
+        .tuProyecto{
+            margin-left: 0rem;
+            margin-right: 0rem;
+            fieldset{
+                textarea{
+                    width: 100%;
+                }
+            }
+        }    
+    }
+}   
