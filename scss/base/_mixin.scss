@@ -3,9 +3,32 @@
     font-size:  1rem;
     font-weight: bold;
     text-align: center;
-    background-color: wheat;    
+    background-color: $color-fondo;    
     margin: 1rem;
     border-radius: 40%;
+}
+
+@mixin estilos-footer{
+    grid-area: footer;
+    background-color: rgb(196, 250, 232);
+    display: flex;
+    justify-content: space-around;
+    .derechos{
+        margin: 0.5rem;
+        text-align: center;
+        align-self: center;
+        font-size: small;
+    }
+
+    section{
+        align-self: center;
+        .siguenos{
+            margin: 0.5rem;
+            font-weight: bold;
+            font-size: large;
+        }
+
+    }
 }
 
 @mixin transform($transform){

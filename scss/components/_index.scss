@@ -8,6 +8,7 @@
     grid-template-areas:"header"
                         "main"
                         "footer";
+    row-gap: 1rem;
 
 }
 
@@ -46,7 +47,7 @@
     display: grid;
     grid-area: main;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
     grid-template-areas:"titulo titulo"
                         "imgUno imgUno"
                         "texto imgDos"
@@ -101,12 +102,9 @@
 }
 
 .gridFooter{
-    grid-area: footer;
 
-    .derechos{
-        text-align: center;
-        margin-top: 4rem;
-    }
+    @include estilos-footer;
+        
 }
 
 
@@ -132,7 +130,7 @@
         
     .gridIndex{
         grid-template-columns: auto;
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 0.5fr;
         grid-template-areas:"titulo"
                             "imgUno"
                             "texto"
@@ -190,7 +188,7 @@
         
     .gridIndex{
         grid-template-columns: auto;
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
         grid-template-areas:"titulo"
                             "imgUno"
                             "texto"

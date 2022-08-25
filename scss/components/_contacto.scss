@@ -3,8 +3,8 @@
 .gridContacto{
     display: grid;
     grid-area: main;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 0.4fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
     grid-template-areas:"titulo titulo"
                         "contacto img6";
     justify-content: center;
@@ -18,7 +18,7 @@
     .imagenContacto{
         grid-area: img6;
         justify-self: center;
-        transform: scale(0.8);
+        transform: scale(0.6);
     
     }
     
@@ -27,6 +27,7 @@
     }
 
     .formaContacto{
+        justify-self: right;
         grid-area: contacto;
         font-size: 1rem;
 
@@ -35,20 +36,26 @@
 
             legend{
                 font-weight: bold;
+                margin-bottom: 2rem;
             }
 
             .botonesContacto{
                 input{
-                    border-radius: 0.5rem;
+                    border-radius: 30px;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                     font-size: 1rem;
                     margin-top: 1rem;
-                }    
+                }   
+                
+                input:hover{
+                    background-color: $color-fondo;
+                }
             }
         }
-    }
-    
-   
+    }  
 }
+
 
 /*vista tablet contacto*/
 
@@ -71,11 +78,42 @@
     }
 
     .gridContacto{
+        grid-template-columns: auto;
+        grid-template-rows: 0.3fr 0.6fr 1fr;
+        grid-template-areas:"titulo"
+                            "imgMobile"
+                            "contacto";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        row-gap: 1rem;
+
         .tituloParaTodo{
             text-shadow: 1px 1px black;
         }
 
+        .formaContacto{
+            justify-self: center;
+        }
+        
+        .imagenMobile{
+            display: block;
+            grid-area: imgMobile;
+            text-align: center;
+
+            img{
+    
+                width: 80%;
+            }
+            
+        }
+
+        .imagenContacto{
+            display: none;
+        }
     }
+
+    
 }
 
 /*vista mobile contacto*/
@@ -100,7 +138,7 @@
 
     .gridContacto{
         grid-template-columns: auto;
-        grid-template-rows: 0.5fr 1fr 2fr;
+        grid-template-rows: 0.3fr 0.4fr 1fr;
         grid-template-areas:"titulo"
                             "imgMobile"
                             "contacto";
@@ -111,6 +149,10 @@
 
         .tituloParaTodo{
             text-shadow: 1px 1px black;
+        }
+
+        .formaContacto{
+            justify-self: center;
         }
         
         .imagenMobile{

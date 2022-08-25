@@ -1,34 +1,44 @@
 /*Estilos de Nosotros*/
-.container-fluid{
-    .row{
-        .tituloParaTodo{
-            @extend %titulo;
-        }
 
-        .imagenNosotros{
-            margin-top: 2rem;
-            text-align: center;
-            img{
-                width: 80%;
-            }
-        }
-
-        .textoNosotros{
-            margin-top: 2rem;
-            padding-right: 8rem;
-            align-self: center; 
-            p{
-                font-size: x-large;
-                font-weight: bold;
-                text-align: justify;
-            }
-        }
-    }
+.gridNosotros{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas:"titulo titulo"
+                        "imgNosotros textoNosotros";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 2rem;
+    column-gap: 1rem;
     
-    .footerNosotros{
-        margin-top: 13rem;
+    .tituloParaTodo{
+        @extend %titulo;
     }
+
+    .imagenNosotros{
+        grid-area: imgNosotros;
+        text-align: center;
+        img{
+            width: 80%;
+        }
+    }
+
+    .textoNosotros{
+        grid-area: textoNosotros;
+        padding-right: 8rem;
+        align-self: center; 
+        p{
+            font-size: x-large;
+            font-weight: bold;
+            text-align: justify;
+        }
+    }
+
 }
+
+
 
 
 /*Vista tablet Nosotros*/
@@ -49,20 +59,28 @@
         }
     }
     
-    .container-fluid{
-        .row{
-            .tituloParaTodo{
-                text-shadow: 1px 1px black;
-            }
+    .gridNosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr 0.5fr;
+        grid-template-areas:"titulo"
+                            "imgNosotros"
+                             "textoNosotros";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        row-gap: 1rem;
+    
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
 
-            .textoNosotros{
-                padding: 5rem;
-                p{
-                    font-size: large;
-                }
+        .textoNosotros{
+            padding: 5rem;
+            p{
+                font-size: large;
             }
         }
-    }    
+    }   
 }
 
 /*Vista mobile Nosotros*/
@@ -85,19 +103,29 @@
     }
     
 
-    .container-fluid{
-        .row{
-            .tituloParaTodo{
-                text-shadow: 1px 1px black;
-            }
+    .gridNosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.5fr 0.5fr;
+        grid-template-areas:"titulo"
+                            "imgNosotros"
+                             "textoNosotros";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+     
+    
+        .tituloParaTodo{
+            text-shadow: 1px 1px black;
+        }
 
-            .textoNosotros{
-                padding: 3rem;
-                p{
-                    font-size: medium;
-                }
+        .textoNosotros{
+            padding: 2.5rem;
+            p{
+        
+                font-size: medium;
             }
-        } 
-    }       
-}
+        }
+    } 
+}       
+
 

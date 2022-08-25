@@ -3,14 +3,14 @@
     grid-area: main;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0.8fr 2fr 2fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
     grid-template-areas:"titulo titulo titulo"
                         "proyectoUno proyectoDos proyectoTres"
                         "tuProyecto tuProyecto tuProyecto";
     justify-content: center;
     justify-items: center;
     align-items: center;
-    column-gap: 3rem;
+    column-gap: 1rem;
 
     .tituloParaTodo{
         @extend %titulo;
@@ -21,13 +21,16 @@
         text-align: center;
 
         p{
+            font-weight: bold;
+            font-size: large;
             text-align: center;
+            margin-top: 1rem;
         }
 
         img{
             width: 80%;
-            border-radius: 15%;
-            border: 3.5px $color-letra solid;
+            border-radius: 10%;
+           
         }
        
     }
@@ -37,13 +40,15 @@
         text-align: center;
     
         p{
+            font-weight: bold;
+            font-size: large;
             text-align: center;
+            margin-top: 1rem;
         }
     
         img{
             width: 80%;
-            border-radius: 15%;
-            border: 3.5px $color-letra solid;
+            border-radius: 10%;
         }
        
     }
@@ -54,13 +59,15 @@
         text-align: center;
 
         p{
+            font-weight: bold;
+            font-size: large;
             text-align: center;
+            margin-top: 1rem;
         }
         
         img{
             width: 80%;
-            border-radius: 15%;
-            border: 3.5px $color-letra solid;
+            border-radius: 10%;
         }
     }
 
@@ -82,6 +89,18 @@
             label{
                 font-size: large;
                 font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            input{
+                border-radius: 30px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: 1rem;
+            }
+
+            input:hover{
+                background-color: $color-fondo;
             }
         }
     }
@@ -110,7 +129,7 @@
 
     .gridProyectos{
         grid-template-columns: auto;
-        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
         grid-template-areas:"titulo"
                             "proyectoUno"
                             "proyectoDos"
@@ -119,16 +138,15 @@
         justify-content: center;
         justify-items: center;
         align-items: center;
-        margin: 1rem;
-        row-gap: 5rem;
+        row-gap: 1rem;
             
         .tituloParaTodo{
             text-shadow: 1px 1px black;
         }
 
         .tuProyecto{
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
             fieldset{
                 textarea{
                     width: 100%;
@@ -162,7 +180,7 @@
 
     .gridProyectos{
         grid-template-columns: auto;
-        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
         grid-template-areas:"titulo"
                             "proyectoUno"
                             "proyectoDos"
@@ -171,16 +189,15 @@
         justify-content: center;
         justify-items: center;
         align-items: center;
-        margin: 1rem;
-        row-gap: 3rem;
+        row-gap: 1rem;
             
         .tituloParaTodo{
             text-shadow: 1px 1px black;
         }
 
         .tuProyecto{
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
             fieldset{
                 textarea{
                     width: 100%;

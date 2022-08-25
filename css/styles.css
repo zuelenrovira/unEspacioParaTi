@@ -1,10 +1,9 @@
-.gridIndex .tituloParaTodo, .container-fluid .row .tituloParaTodo, .gridProyectos .tituloParaTodo, .gridBlog .tituloParaTodo, .gridContacto .tituloParaTodo {
+.gridIndex .tituloParaTodo, .gridNosotros .tituloParaTodo, .gridProyectos .tituloParaTodo, .gridBlog .tituloParaTodo, .gridContacto .tituloParaTodo {
   grid-area: titulo;
   text-align: center;
   color: #4e134e;
   font-weight: bold;
-  text-shadow: 1px 2px black;
-  margin-top: 1rem; }
+  text-shadow: 1px 2px black; }
 
 /*Estilos de Index*/
 .contenedorGrid {
@@ -12,7 +11,8 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header" "main" "footer";
+  row-gap: 1rem; }
 
 .headerParaTodo {
   grid-area: header;
@@ -44,7 +44,7 @@
   display: grid;
   grid-area: main;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
+  grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
   grid-template-areas: "titulo titulo" "imgUno imgUno" "texto imgDos" "iconos iconos";
   justify-content: center;
   justify-items: center;
@@ -72,10 +72,21 @@
         list-style: none; }
 
 .gridFooter {
-  grid-area: footer; }
+  grid-area: footer;
+  background-color: #c4fae8;
+  display: flex;
+  justify-content: space-around; }
   .gridFooter .derechos {
+    margin: 0.5rem;
     text-align: center;
-    margin-top: 4rem; }
+    align-self: center;
+    font-size: small; }
+  .gridFooter section {
+    align-self: center; }
+    .gridFooter section .siguenos {
+      margin: 0.5rem;
+      font-weight: bold;
+      font-size: large; }
 
 /*Vista tablet index*/
 @media only screen and (max-width: 991px) {
@@ -87,7 +98,7 @@
         background-color: transparent; }
   .gridIndex {
     grid-template-columns: auto;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.5fr;
     grid-template-areas: "titulo" "imgUno" "texto" "imgDos" "iconos";
     justify-content: center;
     justify-items: center;
@@ -117,7 +128,7 @@
         background-color: transparent; }
   .gridIndex {
     grid-template-columns: auto;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "titulo" "imgUno" "texto" "imgDos" "iconos";
     justify-content: center;
     justify-items: center;
@@ -140,23 +151,30 @@
         font-size: medium; } }
 
 /*Estilos de Nosotros*/
-.container-fluid .row .imagenNosotros {
-  margin-top: 2rem;
-  text-align: center; }
-  .container-fluid .row .imagenNosotros img {
-    width: 80%; }
-
-.container-fluid .row .textoNosotros {
-  margin-top: 2rem;
-  padding-right: 8rem;
-  align-self: center; }
-  .container-fluid .row .textoNosotros p {
-    font-size: x-large;
-    font-weight: bold;
-    text-align: justify; }
-
-.container-fluid .footerNosotros {
-  margin-top: 13rem; }
+.gridNosotros {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  grid-template-areas: "titulo titulo" "imgNosotros textoNosotros";
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 1rem; }
+  .gridNosotros .imagenNosotros {
+    grid-area: imgNosotros;
+    text-align: center; }
+    .gridNosotros .imagenNosotros img {
+      width: 80%; }
+  .gridNosotros .textoNosotros {
+    grid-area: textoNosotros;
+    padding-right: 8rem;
+    align-self: center; }
+    .gridNosotros .textoNosotros p {
+      font-size: x-large;
+      font-weight: bold;
+      text-align: justify; }
 
 /*Vista tablet Nosotros*/
 @media only screen and (max-width: 991px) {
@@ -166,12 +184,20 @@
       width: 100%; }
       .headerParaTodo .navbar .container-fluid .menu ul li {
         background-color: transparent; }
-  .container-fluid .row .tituloParaTodo {
-    text-shadow: 1px 1px black; }
-  .container-fluid .row .textoNosotros {
-    padding: 5rem; }
-    .container-fluid .row .textoNosotros p {
-      font-size: large; } }
+  .gridNosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
+    grid-template-areas: "titulo" "imgNosotros" "textoNosotros";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem; }
+    .gridNosotros .tituloParaTodo {
+      text-shadow: 1px 1px black; }
+    .gridNosotros .textoNosotros {
+      padding: 5rem; }
+      .gridNosotros .textoNosotros p {
+        font-size: large; } }
 
 /*Vista mobile Nosotros*/
 @media only screen and (max-width: 480px) {
@@ -181,51 +207,64 @@
       width: 100%; }
       .headerParaTodo .navbar .container-fluid .menu ul li {
         background-color: transparent; }
-  .container-fluid .row .tituloParaTodo {
-    text-shadow: 1px 1px black; }
-  .container-fluid .row .textoNosotros {
-    padding: 3rem; }
-    .container-fluid .row .textoNosotros p {
-      font-size: medium; } }
+  .gridNosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr;
+    grid-template-areas: "titulo" "imgNosotros" "textoNosotros";
+    justify-content: center;
+    justify-items: center;
+    align-items: center; }
+    .gridNosotros .tituloParaTodo {
+      text-shadow: 1px 1px black; }
+    .gridNosotros .textoNosotros {
+      padding: 2.5rem; }
+      .gridNosotros .textoNosotros p {
+        font-size: medium; } }
 
 /*Estilos de Proyectos*/
 .gridProyectos {
   grid-area: main;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 0.8fr 2fr 2fr;
+  grid-template-rows: 0.3fr 1fr 1fr;
   grid-template-areas: "titulo titulo titulo" "proyectoUno proyectoDos proyectoTres" "tuProyecto tuProyecto tuProyecto";
   justify-content: center;
   justify-items: center;
   align-items: center;
-  column-gap: 3rem; }
+  column-gap: 1rem; }
   .gridProyectos .proyectoUno {
     grid-area: proyectoUno;
     text-align: center; }
     .gridProyectos .proyectoUno p {
-      text-align: center; }
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+      margin-top: 1rem; }
     .gridProyectos .proyectoUno img {
       width: 80%;
-      border-radius: 15%;
-      border: 3.5px #4e134e solid; }
+      border-radius: 10%; }
   .gridProyectos .proyectoDos {
     grid-area: proyectoDos;
     text-align: center; }
     .gridProyectos .proyectoDos p {
-      text-align: center; }
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+      margin-top: 1rem; }
     .gridProyectos .proyectoDos img {
       width: 80%;
-      border-radius: 15%;
-      border: 3.5px #4e134e solid; }
+      border-radius: 10%; }
   .gridProyectos .proyectoTres {
     grid-area: proyectoTres;
     text-align: center; }
     .gridProyectos .proyectoTres p {
-      text-align: center; }
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+      margin-top: 1rem; }
     .gridProyectos .proyectoTres img {
       width: 80%;
-      border-radius: 15%;
-      border: 3.5px #4e134e solid; }
+      border-radius: 10%; }
   .gridProyectos .tuProyecto {
     padding: 1rem;
     background-color: #9ccddc;
@@ -239,7 +278,15 @@
       font-size: large; }
     .gridProyectos .tuProyecto fieldset label {
       font-size: large;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-bottom: 1rem; }
+    .gridProyectos .tuProyecto fieldset input {
+      border-radius: 30px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 1rem; }
+    .gridProyectos .tuProyecto fieldset input:hover {
+      background-color: wheat; }
 
 /*vista tablet Proyectos*/
 @media only screen and (max-width: 991px) {
@@ -251,18 +298,17 @@
         background-color: transparent; }
   .gridProyectos {
     grid-template-columns: auto;
-    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "titulo" "proyectoUno" "proyectoDos" "proyectoTres" "tuProyecto";
     justify-content: center;
     justify-items: center;
     align-items: center;
-    margin: 1rem;
-    row-gap: 5rem; }
+    row-gap: 1rem; }
     .gridProyectos .tituloParaTodo {
       text-shadow: 1px 1px black; }
     .gridProyectos .tuProyecto {
-      margin-left: 0rem;
-      margin-right: 0rem; }
+      margin-left: 1rem;
+      margin-right: 1rem; }
       .gridProyectos .tuProyecto fieldset textarea {
         width: 100%; } }
 
@@ -276,18 +322,17 @@
         background-color: transparent; }
   .gridProyectos {
     grid-template-columns: auto;
-    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "titulo" "proyectoUno" "proyectoDos" "proyectoTres" "tuProyecto";
     justify-content: center;
     justify-items: center;
     align-items: center;
-    margin: 1rem;
-    row-gap: 3rem; }
+    row-gap: 1rem; }
     .gridProyectos .tituloParaTodo {
       text-shadow: 1px 1px black; }
     .gridProyectos .tuProyecto {
-      margin-left: 0rem;
-      margin-right: 0rem; }
+      margin-left: 1rem;
+      margin-right: 1rem; }
       .gridProyectos .tuProyecto fieldset textarea {
         width: 100%; } }
 
@@ -296,48 +341,60 @@
   display: grid;
   grid-area: main;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr;
   grid-template-areas: "titulo titulo titulo" "articulo1 articulo2 articulo3" "articulo4 articulo5 articulo6";
   justify-items: center;
   justify-content: center;
   align-items: center;
-  row-gap: 1.5rem; }
+  row-gap: 1rem; }
   .gridBlog .articulo1 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo1; }
     .gridBlog .articulo1 img {
       width: 80%; }
+    .gridBlog .articulo1 p {
+      margin-top: 1rem; }
   .gridBlog .articulo2 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo2; }
     .gridBlog .articulo2 img {
       width: 80%; }
+    .gridBlog .articulo2 p {
+      margin-top: 1rem; }
   .gridBlog .articulo3 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo3; }
     .gridBlog .articulo3 img {
       width: 80%; }
+    .gridBlog .articulo3 p {
+      margin-top: 1rem; }
   .gridBlog .articulo4 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo4; }
     .gridBlog .articulo4 img {
       width: 80%; }
+    .gridBlog .articulo4 p {
+      margin-top: 1rem; }
   .gridBlog .articulo5 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo5; }
     .gridBlog .articulo5 img {
       width: 80%; }
+    .gridBlog .articulo5 p {
+      margin-top: 1rem; }
   .gridBlog .articulo6 {
     text-align: center;
     font-weight: bold;
     grid-area: articulo6; }
     .gridBlog .articulo6 img {
       width: 80%; }
+    .gridBlog .articulo6 p {
+      margin-top: 1rem; }
 
 /*vista tablet blog*/
 @media only screen and (max-width: 991px) {
@@ -348,13 +405,13 @@
       .headerParaTodo .navbar .container-fluid .menu ul li {
         background-color: transparent; }
   .gridBlog {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
     grid-template-areas: "titulo titulo" "articulo1 articulo2" "articulo3 articulo4" "articulo5 articulo6";
     justify-items: center;
     justify-content: center;
     align-items: center;
-    row-gap: 1.5rem; }
+    row-gap: 1rem; }
     .gridBlog .tituloParaTodo {
       text-shadow: 1px 1px black; } }
 
@@ -373,7 +430,7 @@
     justify-items: center;
     justify-content: center;
     align-items: center;
-    row-gap: 1.5rem; }
+    row-gap: 1rem; }
     .gridBlog .tituloParaTodo {
       text-shadow: 1px 1px black; } }
 
@@ -381,8 +438,8 @@
 .gridContacto {
   display: grid;
   grid-area: main;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 0.4fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
   grid-template-areas: "titulo titulo" "contacto img6";
   justify-content: center;
   justify-items: center;
@@ -390,20 +447,26 @@
   .gridContacto .imagenContacto {
     grid-area: img6;
     justify-self: center;
-    transform: scale(0.8); }
+    transform: scale(0.6); }
   .gridContacto .imagenMobile {
     display: none; }
   .gridContacto .formaContacto {
+    justify-self: right;
     grid-area: contacto;
     font-size: 1rem; }
     .gridContacto .formaContacto fieldset {
       border: none; }
       .gridContacto .formaContacto fieldset legend {
-        font-weight: bold; }
+        font-weight: bold;
+        margin-bottom: 2rem; }
       .gridContacto .formaContacto fieldset .botonesContacto input {
-        border-radius: 0.5rem;
+        border-radius: 30px;
+        padding-left: 1rem;
+        padding-right: 1rem;
         font-size: 1rem;
         margin-top: 1rem; }
+      .gridContacto .formaContacto fieldset .botonesContacto input:hover {
+        background-color: wheat; }
 
 /*vista tablet contacto*/
 @media only screen and (max-width: 991px) {
@@ -413,8 +476,26 @@
       width: 100%; }
       .headerParaTodo .navbar .container-fluid .menu ul li {
         background-color: transparent; }
-  .gridContacto .tituloParaTodo {
-    text-shadow: 1px 1px black; } }
+  .gridContacto {
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr 0.6fr 1fr;
+    grid-template-areas: "titulo" "imgMobile" "contacto";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem; }
+    .gridContacto .tituloParaTodo {
+      text-shadow: 1px 1px black; }
+    .gridContacto .formaContacto {
+      justify-self: center; }
+    .gridContacto .imagenMobile {
+      display: block;
+      grid-area: imgMobile;
+      text-align: center; }
+      .gridContacto .imagenMobile img {
+        width: 80%; }
+    .gridContacto .imagenContacto {
+      display: none; } }
 
 /*vista mobile contacto*/
 @media only screen and (max-width: 480px) {
@@ -426,7 +507,7 @@
         background-color: transparent; }
   .gridContacto {
     grid-template-columns: auto;
-    grid-template-rows: 0.5fr 1fr 2fr;
+    grid-template-rows: 0.3fr 0.4fr 1fr;
     grid-template-areas: "titulo" "imgMobile" "contacto";
     justify-content: center;
     justify-items: center;
@@ -434,6 +515,8 @@
     row-gap: 1rem; }
     .gridContacto .tituloParaTodo {
       text-shadow: 1px 1px black; }
+    .gridContacto .formaContacto {
+      justify-self: center; }
     .gridContacto .imagenMobile {
       display: block;
       grid-area: imgMobile;
